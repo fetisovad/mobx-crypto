@@ -16,7 +16,7 @@ const CoinIconStyle = {
   height: 40,
 };
 
-interface ICryptoTable {
+type ICryptoTable = {
   items: TCoin[];
 }
 
