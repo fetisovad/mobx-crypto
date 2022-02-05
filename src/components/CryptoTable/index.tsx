@@ -21,17 +21,17 @@ const CoinIconStyle = {
 
 type ICryptoTable = {
   currenciesStore?: CurrenciesStore;
-}
+};
 
 const CryptoTable = inject('currenciesStore')(
-  observer(({currenciesStore}: ICryptoTable) => {
+  observer(({ currenciesStore }: ICryptoTable) => {
     const items: TCoin[] = currenciesStore!.getItems;
 
     useEffect(() => {
-      if(currenciesStore) {
+      if (currenciesStore) {
         currenciesStore.fetchCoins();
       }
-    }, [])
+    }, []);
 
     return (
       <TableContainer component={Paper}>
